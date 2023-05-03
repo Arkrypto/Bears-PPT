@@ -1,0 +1,15 @@
+{
+  "name": "northboat-slidev",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.40.16",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "^0.21.3",
+    "resolve-from": "^5.0.0"
+  }
+}
