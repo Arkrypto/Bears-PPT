@@ -3,7 +3,8 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://source.unsplash.com/collection/94734566/1920x1080
+# background: https://source.unsplash.com/collection/94734566/1920x1080
+background: ./assets/neuq.png
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -25,13 +26,14 @@ transition: slide-left
 css: unocss
 ---
 
-# Welcome to Slidev
+# 熊舟桐 - 东北大学
 
-Presentation slides for developers
+
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
+    计算机科学与技术
+    <!--<carbon:arrow-right class="inline"/>-->
   </span>
 </div>
 
@@ -39,7 +41,7 @@ Presentation slides for developers
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
+  <a href="https://github.com/canoe95" target="_blank" alt="GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -53,22 +55,25 @@ The last comment block of each slide will be treated as slide notes. It will be 
 transition: fade-out
 ---
 
-# What is Slidev?
+# 本科进程一览
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+A sample PCB of my study life in NEUQ
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+- 📝 **大一**
+  - 初识计算机，入门 C/C++、STL 以及图形编程
+  - 入门网安失败，加入2084工作室，选择做开发，自学 Java Web 及前端三件套，能够熟练编写 JSP 程序
+- 🧑‍💻 **大二**
+  - 养成用博客记录学习过程的习惯，坚持力扣每日一题
+  - 能够独立使用前后端框架及相应中间件设计、编写并部署Web程序，开始组队参加软件开发类比赛
+- 🛠 **大三**
+  - 出于环境部署方便，放弃 Windows 转用 Linux（Manjaro）
+  - 参加中国大学生计算机设计大赛，获得国家三等奖
+- 🤹 **大四**
+  - 备考西电网络与信息安全专业
 
 <br>
-<br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<a herf="https://github.com/canoe95" style="float: right;">Read more about me</a>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -95,51 +100,26 @@ Here is another comment.
 layout: default
 ---
 
-# Table of contents
+# 目录
 
 ```
-<Toc minDepth="1" maxDepth="5"></Toc>
+Directory ———— press O browse the whole ppt
 ```
 
 <Toc></Toc>
-
----
-transition: slide-up
-
-level: 2
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: image-right
 image: https://source.unsplash.com/collection/94734566/1920x1080
 ---
 
-# Code
+# 学生工作
 
-Use code snippets and get the highlighting directly![^1]
+计工学院实践部副主任
 
-```ts {all|2|1-6|9|all}
+电脑维修，支教，大学生志愿项目[^1]
+
+```
 interface User {
   id: number
   firstName: string
@@ -154,7 +134,7 @@ function updateUser(id: number, update: User) {
 }
 ```
 
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
+<arrow v-click="2" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
 
 [^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
@@ -170,14 +150,16 @@ function updateUser(id: number, update: User) {
 }
 </style>
 
+
 ---
 
-# Components
+# 文体艺术
 
 <div grid="~ cols-2 gap-4">
 <div>
+校乒乓球队队员
 
-You can use Vue components directly inside your slides.
+球馆助教
 
 We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
 
@@ -217,29 +199,31 @@ Also, HTML elements are valid:
 class: px-20
 ---
 
-# Themes
+# 本科课程
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
 
-<div grid="~ cols-2 gap-2" m="-t-2">
+<br>
 
-```yaml
----
-theme: default
----
-```
+Inline $\sqrt{3x-1}+(1+x)^2$
 
-```yaml
----
-theme: seriph
----
-```
+Block
+$$
+\begin{array}{c}
 
-<img border="rounded" src="https://source.unsplash.com/collection/94734566/1920x1080">
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
 
-<img border="rounded" src="https://source.unsplash.com/collection/94734566/1920x1080">
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
 
-</div>
+\nabla \cdot \vec{\mathbf{B}} & = 0
+
+\end{array}
+$$
+
+<br>
+
+
 
 Read more about [How to use a theme](https://sli.dev/themes/use.html) and
 check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
@@ -248,7 +232,7 @@ check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 preload: false
 ---
 
-# Animations
+# 技术清单
 
 Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
 
@@ -315,42 +299,47 @@ const final = {
   v-motion
   :initial="{ x:35, y: 40, opacity: 0}"
   :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
+<a herf="https://sli.dev/guide/animations.html#motion">Learn More</a>
 
 </div>
 
 ---
 
-# LaTeX
+# 软件产出
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
-<br>
+### Keyboard Shortcuts
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+|                                                     |                             |
+| --------------------------------------------------- | --------------------------- |
+| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd>                                       | previous slide              |
+| <kbd>down</kbd>                                     | next slide                  |
 
-Block
-$$
-\begin{array}{c}
+```ts {all|2|1-6|9|all}
+interface User {
+  id: number
+  firstName: string
+  lastName: string
+  role: string
+}
 
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+function updateUser(id: number, update: User) {
+  const user = getUser(id)
+  const newUser = { ...user, ...update }
+  saveUser(id, newUser)
+}
+```
 
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
 
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
 
 [Learn more](https://sli.dev/guide/syntax#latex)
 
 ---
 
-# Diagrams
+# 未来展望
 
 You can create diagrams / graphs from textual descriptions, directly in your Markdown.
 
@@ -430,7 +419,7 @@ database "MySql" {
 
 ---
 src: ./pages/multiple-entries.md
-hide: false
+hide: true
 ---
 
 ---
@@ -438,9 +427,9 @@ layout: center
 class: text-center
 ---
 
-# Learn More
+# 感谢观看
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+[GitHub](https://github.com/canoe95/slidev) · [Blog](https://canoe95.github.io)
 
 ---
 layout: end
