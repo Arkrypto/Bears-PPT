@@ -26,16 +26,17 @@ transition: slide-left
 css: unocss
 ---
 
-# 熊舟桐 - 东北大学
+# 熊舟桐
 
 
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    计算机科学与技术
+    东北大学秦皇岛分校 - 计算机科学与技术
     <!--<carbon:arrow-right class="inline"/>-->
   </span>
 </div>
+
 
 <div class="abs-br m-6 flex gap-2">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
@@ -55,7 +56,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 transition: fade-out
 ---
 
-# 本科进程一览
+# 进程一览
 
 A sample PCB of my study life in NEUQ
 
@@ -91,7 +92,6 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
-
 <!--
 Here is another comment.
 -->
@@ -109,46 +109,23 @@ Directory ———— press O browse the whole ppt
 <Toc></Toc>
 
 ---
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
----
 
 # 学生工作
 
-计工学院实践部副主任
+院实践部副主任
 
-电脑维修，支教，大学生志愿项目[^1]
-
-```
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="2" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+<div style="display:inline-block;width=100px">
+  <p>负责部门日常值班活动的组织、公众号的管理和</p>
+  <p>排班等工作，参与<a href="https://canoe7.netlify.app/">部门博客</a>的搭建和维护。e 管</p>
+  <p>家志愿服务项目获<a href="http://news.neuq.edu.cn/info/1282/30249.htm">省大学生志愿服务十佳项目</a></p><br>
+  
+  <img src="/assets/repair.jpg" width=365>
+</div>
+<div style="display:inline-block;float:right">
+	<img src="/assets/teach.jpg" width="400"><br>
+    <img src="/assets/work.jpg" width="400">
+</div>
+<arrow v-click="1" x1="950" y1="310" x2="712" y2="435" color="#564" width="3" arrowSize="1" />
 
 
 ---
@@ -232,7 +209,7 @@ check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 preload: false
 ---
 
-# 技术清单
+# 技能清单
 
 Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
 
@@ -318,23 +295,6 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 | <kbd>up</kbd>                                       | previous slide              |
 | <kbd>down</kbd>                                     | next slide                  |
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
-
-
 [Learn more](https://sli.dev/guide/syntax#latex)
 
 ---
@@ -418,11 +378,6 @@ database "MySql" {
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
-src: ./pages/multiple-entries.md
-hide: true
----
-
----
 layout: center
 class: text-center
 ---
@@ -435,3 +390,12 @@ class: text-center
 layout: end
 ---
 
+---
+
+src: ./pages/raw.md
+
+hide: false
+---
+
+
+---
