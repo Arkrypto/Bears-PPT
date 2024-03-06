@@ -4,7 +4,7 @@ theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 # background: https://source.unsplash.com/collection/94734566/1920x1080
-background: ./assets/neuq.png
+background: /neuq.png
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -118,12 +118,12 @@ Directory ———— press O browse the whole ppt
   <p>负责部门日常值班活动的组织、公众号的管理和</p>
   <p>排班等工作，参与<a href="https://canoe7.netlify.app/">部门博客</a>的搭建和维护。e 管</p>
   <p>家志愿服务项目获<a href="http://news.neuq.edu.cn/info/1282/30249.htm">省大学生志愿服务十佳项目</a></p><br>
-  
-  <img src="/assets/repair.jpg" width=365>
+
+  <img src="/repair.jpg" width=365>
 </div>
 <div style="display:inline-block;float:right">
-	<img src="/assets/teach.jpg" width="400"><br>
-    <img src="/assets/work.jpg" width="400">
+	<img src="/teach.jpg" width="400"><br>
+    <img src="/work.jpg" width="400">
 </div>
 <arrow v-click="1" x1="950" y1="310" x2="712" y2="435" color="#564" width="3" arrowSize="1" />
 
