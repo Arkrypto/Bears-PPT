@@ -295,26 +295,30 @@ const final = {
 
 Code products during NEUQ, most of them are web program
 
-### 项目名称
-
 |                                     |                                                       |                                                              |
 | ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | <kbd>基于Docker的在线判题系统</kbd> | Online Judge 平台，获中国大学生计算机设计大赛省二等奖 | [Bears-OJ](https://github.com/canoe95/Bears-OJ)              |
 | <kbd>基于ChatGLM的远程AI助手</kbd>  | 大模型助手，获中国大学生计算机设计大赛国家三等奖      | [Shadow](https://github.com/canoe95/Shadow)                  |
 | <kbd>基于Redis的远程CMD</kbd>       | 远程主机控制程序，由Web端和本地监听器组成             | [Remote-Controller-2.0](https://github.com/canoe95/Remote-Controller-2.0) |
-| <kbd>邮件收发系统</kbd>             | 网页邮箱系统，多线程控制定时发送                      | [PostOffice](https://github.com/canoe95/PostOffice)          |
+| <kbd>邮件收发系统</kbd>             | 网页邮箱系统，Java多线程控制定时发送                  | [PostOffice](https://github.com/canoe95/PostOffice)          |
 | <kbd>击剑火柴人</kbd>               | 双人小游戏，C++图形编程                               | [Fencing-Matchman](https://github.com/canoe95/Fencing-Matchman) |
+| <kbd>分类器训练</kbd>               | 一些机器学习实例                                      | [ML-Experiment](https://github.com/canoe95/ML-Experiment)    |
 
 ---
 
-|                                     |                                                        |                                                              |
-| ----------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
-| <kbd>ChatGPT的桌面应用</kbd>        | ChatGPT的桌面应用，客户端采用Electron，服务端采用Flask | [ChatGPT-Electron](https://github.com/canoe95/ChatGPT-Electron-App) |
-| <kbd>成绩管理系统</kbd>             | 基于Springboot、MyBatis的成绩管理系统                  | [Performance-Analysis-System](https://github.com/canoe95/Performance-Analysis-System) |
-| <kbd>基于Socket的远程关机程序</kbd> | 基于套接字的远程关机程序，由Web端和本地监听器组成      | [Remote-Controller-1.0](https://github.com/canoe95/Remote-Controller-1.0) |
-| <kbd>微型论坛系统</kbd>             | 基于JSP的网页论坛                                      | [NEUQHelper](https://github.com/canoe95/NEUQHelper)          |
+|                                  |                                                |                                                              |
+| -------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
+| <kbd>ChatGPT的桌面应用</kbd>     | ChatGPT的桌面应用，客户端Electron，服务端Flask | [ChatGPT-Electron](https://github.com/canoe95/ChatGPT-Electron-App) |
+| <kbd>成绩管理系统</kbd>          | 基于Springboot、MyBatis的成绩管理系统          | [Performance-Analysis-System](https://github.com/canoe95/Performance-Analysis-System) |
+| <kbd>基于Socket的远程CMD</kbd>   | 基于套接字的远程关机程序，由Web端和监听器组成  | [Remote-Controller-1.0](https://github.com/canoe95/Remote-Controller-1.0) |
+| <kbd>微型论坛系统</kbd>          | 基于JSP的论坛网页                              | [NEUQHelper](https://github.com/canoe95/NEUQHelper)          |
+| <kbd>编译器前端</kbd>            | 词法分析器和语法分析器，由 Flex/Bison 实现     | [Compile-Experiment](https://github.com/canoe95/Compile-Experiment) |
+| <kbd>基于 C 的 Lisp 编译器</kbd> | 《Build Your Own Lisp》                        | [MyLisp](https://github.com/canoe95/MyLisp)                  |
+| <kbd>基于VuePress的单页面</kbd>  | 我的博客                                       | [canoe95.github.io](https://github.com/canoe95/canoe95.github.io) |
 
-[查看更多](https://canoe95.github.io/Pages)
+<br>
+
+&nbsp;&nbsp;[More](https://canoe95.github.io/Pages)
 
 ---
 
@@ -327,7 +331,7 @@ Some technology stack I want to acquire in the furture
 ```mermaid {scale: 0.5}
 sequenceDiagram
     PC 1->PC 2: 消息队列
-    Note over PC 1,PC 2: 分布式系统开发部署
+    Note over PC 1,PC 2: 分布式系统开发
 ```
 
 ```mermaid {theme: 'neutral', scale: 0.8}
@@ -339,7 +343,7 @@ C -->|Blue| E[系统开发]
 
 ```mermaid
 mindmap
-  root((机器学习))
+  root(机器学习)
     大模型
       Web UI
       Docker 部署
@@ -354,44 +358,7 @@ mindmap
       数据可视化
 ```
 
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
 </div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
 layout: center
@@ -401,10 +368,3 @@ class: text-center
 # 感谢观看
 
 Thanks for reading
-
----
-layout: end
----
-
-
----
