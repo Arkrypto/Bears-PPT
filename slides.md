@@ -136,7 +136,6 @@ Directory ———— 按 o 浏览缩略图
 <div grid="~ cols-2 gap-4">
 <div>
 <span style="font-size:14px">校乒乓球队队员，男单前八，篮球新生杯随队获院亚军</span>
-
 <img src="/pp.jpg" width=350 style="border-radius:2%; margin-top:9px">
 
 
@@ -146,7 +145,6 @@ Directory ———— 按 o 浏览缩略图
 <audio controls>
   <source src="/baiyang.mp3" type="audio/mpeg">
 </audio>
-
 </div>
 
 <div>
@@ -180,14 +178,14 @@ class: px-20
 
 The Courses I Have Learned
 
-| 课程                    | 成绩    | 掌握程度                      |
-| ----------------------- | ------- | ----------------------------- |
-| C++ 程序设计            | 90      | STL、Easy-X图形编程           |
-| 高等数学B(一) / (二)    | 94 / 93 | 良好的逻辑思维                |
-| Java 程序设计           | 97      | JUC 并发编程、Springboot 全栈 |
-| Web 开发与应用          | 92      | HTML/CSS/JS、Vue、Electron    |
-| 计算机网络课程设计      | 90      | Java Socket 编程              |
-| Linux操作系统及内核分析 | 88      | Linux 内核模块开发基础        |
+| 课程                    | 成绩    | 掌握程度                                           |
+| ----------------------- | ------- | -------------------------------------------------- |
+| C++ 程序设计            | 90      | 熟悉 STL，会基本的图形编程                         |
+| 高等数学B(一) / (二)    | 94 / 93 | 良好的逻辑思维                                     |
+| Java 程序设计           | 97      | 能熟练开发后端 API，了解 JUC 并发编程              |
+| Web 开发与应用          | 92      | 能独立使用 HTML/CSS/JS、Vue、Electron 开发前端页面 |
+| 计算机网络课程设计      | 95      | 熟悉 Java Socket 及 WebSocket 编程                 |
+| Linux操作系统及内核分析 | 88      | 熟悉 Linux 基本命令，能手动部署各种服务器环境      |
 
 
 
