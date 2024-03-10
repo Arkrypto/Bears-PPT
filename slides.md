@@ -299,7 +299,7 @@ Code products during NEUQ
 | 项目名称                            | 简述                                                  | Github 链接                                                  |
 | ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | <kbd>基于Docker的在线判题系统</kbd> | Online Judge 平台，获中国大学生计算机设计大赛省二等奖 | [Bears-OJ](https://github.com/canoe95/Bears-OJ)              |
-| <kbd>基于ChatGLM的远程AI助手</kbd>  | 大模型助手，获中国大学生计算机设计大赛国家三等奖      | [Shadow](https://github.com/canoe95/Shadow)                  |
+| <kbd>基于ChatGLM的远程AI助手</kbd>  | 远程大模型助手，获中国大学生计算机设计大赛国家三等奖  | [Shadow](https://github.com/canoe95/Shadow)                  |
 | <kbd>基于Redis的远程CMD</kbd>       | 基于 Redis 的远程主机控制程序，由Web端和监听器组成    | [Remote-Controller-2.0](https://github.com/canoe95/Remote-Controller-2.0) |
 | <kbd>基于Socket的远程CMD</kbd>      | 基于套接字的远程关机程序，由Web端和监听器组成         | [Remote-Controller-1.0](https://github.com/canoe95/Remote-Controller-1.0) |
 | <kbd>我的博客</kbd>                 | 基于 VuePress 的单页面应用                            | [canoe95.github.io](https://canoe95.github.io)               |
