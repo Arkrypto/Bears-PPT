@@ -62,14 +62,14 @@ A sample PCB of my study life in NEUQ
 
 - 📝 **大一**
   - 初识计算机，入门 C/C++、STL 以及图形编程
-  - 加入2084工作室，自学 Java、前端及数据库相关技术栈，能够熟练编写 JSP 程序
+  - 加入2084工作室，自学 Java、前端及数据库相关技术，能够熟练编写 JSP 程序
   - 拥有第一台服务器（CentOS 7.6）
 - 🧑‍💻 **大二**
   - 养成博客记录的习惯，能够熟练使用前后端框架及相应中间件设计、编写、分离部署Web程序
-  - 开始组队参加软件开发类比赛，获省二等奖
+  - 开始组队参加软件开发类比赛，最好成绩为省二等奖
 - 🛠 **大三**
-  - 使用 Linux（Manjaro）作为主力机
-  - 参加中国大学生计算机设计大赛Web开发类，获得国家三等奖
+  - 已修大部分专业课，使用 Linux（Manjaro）作为主力机
+  - 参加中国大学生计算机设计大赛Web开发类，获国家三等奖
 - 🤹 **大四**
   - 备考西电网络与信息安全专业
 
@@ -135,23 +135,28 @@ Directory ———— 按 o 浏览缩略图
 
 <div grid="~ cols-2 gap-4">
 <div>
+<span style="font-size:14px">校乒乓球队队员，男单前八，篮球新生杯随队获院亚军</span>
 
-校乒乓球队队员
+<img src="/pp.jpg" width=350 style="border-radius:2%; margin-top:9px">
 
-课余自学吉他
+
+
+<span style="font-size:14px">课余自学吉他</span>
 
 <audio controls>
   <source src="/baiyang.mp3" type="audio/mpeg">
 </audio>
+
 </div>
 
 <div>
 
 ```html
-大二时在球馆兼职当助教，带小朋友们上乒乓球课
+大三时在球馆兼职助教，教小朋友打球
+每周四会和教练去球馆附近的小学带一节文体活动课
 ```
 
-<img src="/qingyunli.jpg">
+<img src="/qingyunli.jpg" style="border-radius:2%; margin-top:12px">
 
 </div>
 </div>
@@ -171,23 +176,22 @@ Also, HTML elements are valid:
 class: px-20
 ---
 
-# 本科课程
+# 优秀课程
 
 The Courses I Have Learned
 
-<br>
+| 课程                    | 成绩    | 掌握程度                      |
+| ----------------------- | ------- | ----------------------------- |
+| C++ 程序设计            | 90      | STL、Easy-X图形编程           |
+| 高等数学B(一) / (二)    | 94 / 93 | 良好的逻辑思维                |
+| Java 程序设计           | 97      | JUC 并发编程、Springboot 全栈 |
+| Web 开发与应用          | 92      | HTML/CSS/JS、Vue、Electron    |
+| 计算机网络课程设计      | 90      | Java Socket 编程              |
+| Linux操作系统及内核分析 | 88      | Linux 内核模块开发基础        |
 
-| 课程                 | 成绩    | 掌握程度                      |
-| -------------------- | ------- | ----------------------------- |
-| C++ 程序设计         | 90      | STL、Easy-X图形编程           |
-| 高等数学B(一) / (二) | 94 / 93 | 良好的逻辑思维                |
-| Java 程序设计        | 97      | JUC 并发编程、Springboot 全栈 |
-| Web 开发与应用       | 92      | HTML/CSS/JS、Vue、Electron    |
-| 计算机网络课程设计   | 90      | Java Socket 编程              |
 
-<br>
 
-<a href="/grade.pdf">完整成绩单</a>
+<kbd style="float:right"><a href="/grade.pdf">点此浏览完整成绩单</a></kbd>
 
 ---
 preload: false
@@ -294,28 +298,28 @@ const final = {
 
 Code products during NEUQ
 
-|                                     |                                                       |                                                              |
+| 项目名称                            | 简述                                                  | Github 链接                                                  |
 | ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | <kbd>基于Docker的在线判题系统</kbd> | Online Judge 平台，获中国大学生计算机设计大赛省二等奖 | [Bears-OJ](https://github.com/canoe95/Bears-OJ)              |
 | <kbd>基于ChatGLM的远程AI助手</kbd>  | 大模型助手，获中国大学生计算机设计大赛国家三等奖      | [Shadow](https://github.com/canoe95/Shadow)                  |
-| <kbd>基于Redis的远程CMD</kbd>       | 远程主机控制程序，由Web端和本地监听器组成             | [Remote-Controller-2.0](https://github.com/canoe95/Remote-Controller-2.0) |
-| <kbd>邮件收发系统</kbd>             | 网页邮箱系统，Java多线程控制定时发送                  | [PostOffice](https://github.com/canoe95/PostOffice)          |
-| <kbd>击剑火柴人</kbd>               | 双人小游戏，C++图形编程                               | [Fencing-Matchman](https://github.com/canoe95/Fencing-Matchman) |
-| <kbd>简易的分类器训练</kbd>         | 一些 SKLearn 和 PyTorch 的机器学习实例                | [ML-Experiment](https://github.com/canoe95/ML-Experiment)    |
+| <kbd>基于Redis的远程CMD</kbd>       | 基于 Redis 的远程主机控制程序，由Web端和监听器组成    | [Remote-Controller-2.0](https://github.com/canoe95/Remote-Controller-2.0) |
+| <kbd>基于Socket的远程CMD</kbd>      | 基于套接字的远程关机程序，由Web端和监听器组成         | [Remote-Controller-1.0](https://github.com/canoe95/Remote-Controller-1.0) |
+| <kbd>我的博客</kbd>                 | 基于 VuePress 的单页面应用                            | [canoe95.github.io](https://canoe95.github.io)               |
+| <kbd>击剑火柴人</kbd>               | 双人小游戏，C++ 图形编程                              | [Fencing-Matchman](https://github.com/canoe95/Fencing-Matchman) |
+
+<kbd style="float:right">下一页 ——></kbd>
 
 ---
 
-|                                  |                                                |                                                              |
+| 项目名称                         | 简述                                           | Github 链接                                                  |
 | -------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| <kbd>ChatGPT的桌面应用</kbd>     | ChatGPT的桌面应用，客户端Electron，服务端Flask | [ChatGPT-Electron](https://github.com/canoe95/ChatGPT-Electron-App) |
-| <kbd>成绩管理系统</kbd>          | 基于Springboot、MyBatis的成绩管理系统          | [Performance-Analysis-System](https://github.com/canoe95/Performance-Analysis-System) |
-| <kbd>基于Socket的远程CMD</kbd>   | 基于套接字的远程关机程序，由Web端和监听器组成  | [Remote-Controller-1.0](https://github.com/canoe95/Remote-Controller-1.0) |
-| <kbd>微型论坛系统</kbd>          | 基于JSP的论坛网页                              | [NEUQHelper](https://github.com/canoe95/NEUQHelper)          |
+| <kbd>邮件收发系统</kbd>          | 网页邮箱系统，Java JUC 编程多线程控制邮件发送  | [PostOffice](https://github.com/canoe95/PostOffice)          |
+| <kbd>成绩管理系统</kbd>          | 基于 Springboot、MyBatis 的成绩管理系统        | [Performance-Analysis-System](https://github.com/canoe95/Performance-Analysis-System) |
+| <kbd>微型论坛系统</kbd>          | 基于 JSP 的论坛网页                            | [NEUQHelper](https://github.com/canoe95/NEUQHelper)          |
 | <kbd>编译器前端</kbd>            | 词法分析器和语法分析器，由 Flex/Bison 实现     | [Compile-Experiment](https://github.com/canoe95/Compile-Experiment) |
 | <kbd>基于 C 的 Lisp 编译器</kbd> | 《Build Your Own Lisp》                        | [MyLisp](https://github.com/canoe95/MyLisp)                  |
-| <kbd>基于VuePress的单页面</kbd>  | 我的博客                                       | [canoe95.github.io](https://github.com/canoe95/canoe95.github.io) |
-
-<br>
+| <kbd>ChatGPT的桌面应用</kbd>     | ChatGPT的桌面应用，客户端 Electron，后端 Flask | [ChatGPT-Electron](https://github.com/canoe95/ChatGPT-Electron-App) |
+| <kbd>简易的分类器训练</kbd>      | 一些 SKLearn 和 PyTorch 的机器学习实例         | [ML-Experiment](https://github.com/canoe95/ML-Experiment)    |
 
 &nbsp;&nbsp;[More](https://canoe95.github.io/Pages)
 
@@ -323,31 +327,44 @@ Code products during NEUQ
 
 # 未来展望
 
-Some technology stack I want to acquire in the furture
+Some Technology I Want to Acquire in The Furture
 
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
+<div class="grid grid-cols-2 gap-10 pt-4 -mb-6">
+
 
 ```mermaid {scale: 0.5}
 sequenceDiagram
-    PC 1->PC 2: 消息队列
-    Note over PC 1,PC 2: 分布式系统开发
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[全栈开发] --> C{网络安全}
-C -->|Red| D[网络攻防]
-C -->|Blue| E[系统开发]
+    participant 前端
+    participant 后端
+    participant 分布式服务
+    participant 集群
+    
+	Note over 前端, 分布式服务: 网络安全、攻防
+	Note over 分布式服务, 集群: 分布式系统开发、系统安全
+	
+	
+    
+    loop
+    后端 ->> 后端 : 消息队列
+    前端 ->> + 后端 : 发起请求
+    后端 ->> + 分布式服务 : 请求相应服务
+    分布式服务 ->> 集群 : 读写
+    集群 -->> 分布式服务 : 
+    分布式服务 -->> - 后端 : 返回所需服务
+    后端 -->> - 前端 : 返回内容
+    
+    end
 ```
 
 ```mermaid
 mindmap
-  root(机器学习)
+  root(人工智能安全)
     大模型
       Web UI
-      Docker 部署
+      Docker 容器部署
       深度学习算法及框架
-    深度学习
+    机器学习
+      深度学习
       卷积神经网络
       注意力机制
       循环神经网络
@@ -356,6 +373,10 @@ mindmap
       Pytorch
       数据可视化
 ```
+
+
+
+
 
 </div>
 
