@@ -113,7 +113,7 @@ Directory ———— 按 o 浏览缩略图
 
 # 学生工作
 
-院实践部副主任
+院志愿实践部副主任
 
 <div style="display:inline-block;width=100px">
   <p>负责部门日常值班活动的组织、公众号的管理和</p>
@@ -138,26 +138,17 @@ Directory ———— 按 o 浏览缩略图
 
 校乒乓球队队员
 
-课余兼职
-
 课余自学吉他
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
+<audio controls>
+  <source src="/baiyang.mp3" type="audio/mpeg">
+</audio>
 </div>
+
 <div>
 
 ```html
-<Tweet id="1390115482657726468" />
+大二时在球馆兼职当助教，带小朋友们上乒乓球课
 ```
 
 <img src="/qingyunli.jpg">
@@ -182,54 +173,59 @@ class: px-20
 
 # 本科课程
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+The Courses I Have Learned
 
 <br>
 
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
+| 课程                 | 成绩    | 掌握程度                      |
+| -------------------- | ------- | ----------------------------- |
+| C++ 程序设计         | 90      | STL、Easy-X图形编程           |
+| 高等数学B(一) / (二) | 94 / 93 | 良好的逻辑思维                |
+| Java 程序设计        | 97      | JUC 并发编程、Springboot 全栈 |
+| Web 开发与应用       | 92      | HTML/CSS/JS、Vue、Electron    |
+| 计算机网络课程设计   | 90      | Java Socket 编程              |
 
 <br>
 
-
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
+<a href="/grade.pdf">完整成绩单</a>
 
 ---
 preload: false
 ---
 
+
+
 # 技能清单
 
-The technology stack I have learned
+The Technology I Have Learned
 
-<div style="display:inline-block">
-后端开发<br><br>
-  &emsp;&emsp;语言：Java、Python、C++<br>
-  &emsp;&emsp;数据库：MySQL、Redis<br>
-  &emsp;&emsp;框架：SpringBoot、MyBatis<br><br>
-运维<br><br>
-  &emsp;&emsp;服务器：Linux、Nginx<br>
-  &emsp;&emsp;中间件：Docker、RabbitMQ<br><br>
-前端开发<br><br>
-  &emsp;&emsp;框架：Vue、Element-UI、Electron
+<div grid="~ cols-2 gap-4">
+
+<div>
+
+后端开发
+
+- 语言：Java、Python、C++
+- 框架：SpringBoot、MyBatis
+
+前端开发
+
+- 语言：HTML/CSS/JS、TypeScript
+- 框架：Vue、Element-UI、Electron
+
+运维
+
+- 服务器：Linux、Nginx、Tomcat
+- 中间件：MySQL、Redis、Docker、RabbitMQ
+- 工具与文档：Git、Markdown
+
 </div>
 
-<div style="display:inline-block" class="w-60 relative mt-6">
+<div>
+
+<img src="/devops.png" width="500">
+
+<div class="w-60 relative mt-6">  
   <div class="relative w-40 h-40">
     <img
       v-motion
@@ -253,15 +249,17 @@ The technology stack I have learned
       src="https://sli.dev/logo-triangle.png"
     />
   </div>
-
   <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
+    class="text-5xl absolute top-9 left-42 text-[#2B90B6] -z-1"
     v-motion
     :initial="{ x: -80, opacity: 0}"
     :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    SpringBoot
+    Full Stack Developer
   </div>
 
+
+</div>
+</div>
 </div>
 
 <!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
@@ -284,7 +282,8 @@ const final = {
   v-motion
   :initial="{ x:770, y: 400, opacity: 0}"
   :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-<a herf="https://sli.dev/guide/animations.html#motion">Learn More</a>
+<a herf="https://sli.dev/guide/animations.html#motion"></a>
+
 
 
 </div>
@@ -293,7 +292,7 @@ const final = {
 
 # 软件产出
 
-Code products during NEUQ, most of them are web program
+Code products during NEUQ
 
 |                                     |                                                       |                                                              |
 | ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
@@ -302,7 +301,7 @@ Code products during NEUQ, most of them are web program
 | <kbd>基于Redis的远程CMD</kbd>       | 远程主机控制程序，由Web端和本地监听器组成             | [Remote-Controller-2.0](https://github.com/canoe95/Remote-Controller-2.0) |
 | <kbd>邮件收发系统</kbd>             | 网页邮箱系统，Java多线程控制定时发送                  | [PostOffice](https://github.com/canoe95/PostOffice)          |
 | <kbd>击剑火柴人</kbd>               | 双人小游戏，C++图形编程                               | [Fencing-Matchman](https://github.com/canoe95/Fencing-Matchman) |
-| <kbd>分类器训练</kbd>               | 一些机器学习实例                                      | [ML-Experiment](https://github.com/canoe95/ML-Experiment)    |
+| <kbd>简易的分类器训练</kbd>         | 一些 SKLearn 和 PyTorch 的机器学习实例                | [ML-Experiment](https://github.com/canoe95/ML-Experiment)    |
 
 ---
 
