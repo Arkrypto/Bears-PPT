@@ -325,6 +325,26 @@ Code products during NEUQ
 
 ---
 
+# 代码复现
+
+《Attention Is All You Need》
+
+[A PyTorch implementation of the Transformer model in 《Attention is All You Need》](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
+
+```sh
+conda create attention
+conda activate attention
+conda install --yes --file requirements.txt
+```
+
+
+
+
+
+---
+
+
+
 # 未来展望
 
 Some Technology I Want to Acquire in The Furture
