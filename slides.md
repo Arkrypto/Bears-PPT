@@ -355,7 +355,7 @@ Code products during NEUQ
 
 【1】[Coding a Transformer from scratch on PyTorch, with full explanation, training and inference-YouTube](https://www.youtube.com/watch?v=ISNdQcPhsts)
 
-【2】[A PyTorch implementation of the Transformer model in "Attention is All You Need". (github.com)](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
+【2】[A PyTorch implementation of the Transformer model in "Attention is All You Need"](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
 
 
 
