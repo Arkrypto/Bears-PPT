@@ -111,6 +111,156 @@ Directory ———— 按 o 浏览缩略图
 
 ---
 
+# 优秀课程
+
+The Courses I Have Learned
+
+| 课程                    | 成绩    | 掌握程度                                           |
+| ----------------------- | ------- | -------------------------------------------------- |
+| C++ 程序设计            | 90      | 熟悉 STL，会基本的图形编程                         |
+| 高等数学B(一) / (二)    | 94 / 93 | 良好的逻辑思维                                     |
+| Java 程序设计           | 97      | 能熟练开发后端 API，了解 JUC 并发编程              |
+| Web 开发与应用          | 92      | 能独立使用 HTML/CSS/JS、Vue、Electron 开发前端页面 |
+| 计算机网络课程设计      | 95      | 熟悉 Java Socket 及 WebSocket 编程                 |
+| Linux操作系统及内核分析 | 88      | 熟悉 Linux 基本命令，能手动部署各种服务器环境      |
+
+
+
+<kbd style="float:right"><a href="/grade.pdf">点此浏览完整成绩单</a></kbd>
+
+---
+
+# 技能清单
+
+The Technology I Have Learned
+
+<div grid="~ cols-2 gap-4">
+
+
+<div>
+
+
+后端开发
+
+- 语言：Java、Python、C++
+- 框架：SpringBoot、MyBatis
+
+前端开发
+
+- 语言：HTML/CSS/JS、TypeScript
+- 框架：Vue、Element-UI、Electron
+
+运维
+
+- 服务器：Linux、Nginx、Tomcat
+- 中间件：MySQL、Redis、Docker、RabbitMQ
+- 工具与文档：Git、Markdown
+
+</div>
+
+<div>
+
+
+<img src="/devops.png" width="500">
+
+<div class="w-60 relative mt-6">  
+  <div class="relative w-40 h-40">
+    <img
+      v-motion
+      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-square.png"
+    />
+    <img
+      v-motion
+      :initial="{ x: -100, y: 500, scale: 2 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-circle.png"
+    />
+    <img
+      v-motion
+      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
+      :enter="final"
+      class="absolute top-0 left-0 right-0 bottom-0"
+      src="https://sli.dev/logo-triangle.png"
+    />
+  </div>
+  <div
+    class="text-5xl absolute top-9 left-42 text-[#2B90B6] -z-1"
+    v-motion
+    :initial="{ x: -80, opacity: 0}"
+    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
+    Full Stack Developer
+  </div>
+
+
+
+</div>
+</div>
+</div>
+
+<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
+
+<script setup lang="ts">
+const final = {
+  x: 0,
+  y: 0,
+  rotate: 0,
+  scale: 1,
+  transition: {
+    type: 'spring',
+    damping: 10,
+    stiffness: 20,
+    mass: 2
+  }
+}
+</script>
+<div
+  v-motion
+  :initial="{ x:770, y: 400, opacity: 0}"
+  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
+<a herf="https://sli.dev/guide/animations.html#motion"></a>
+
+
+
+
+</div>
+
+---
+
+# 软件产出
+
+Code products during NEUQ
+
+| 项目名称                            | 简述                                                  | Github 链接                                                  |
+| ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| <kbd>基于Docker的在线判题系统</kbd> | Online Judge 平台，获中国大学生计算机设计大赛省二等奖 | [Bears-OJ](https://github.com/canoe95/Bears-OJ)              |
+| <kbd>基于ChatGLM的远程AI助手</kbd>  | 远程大模型助手，获中国大学生计算机设计大赛国家三等奖  | [Shadow](https://github.com/canoe95/Shadow)                  |
+| <kbd>基于Redis的远程CMD</kbd>       | 基于 Redis 的远程主机控制程序，由Web端和监听器组成    | [Remote-Controller-2.0](https://github.com/canoe95/Remote-Controller-2.0) |
+| <kbd>基于Socket的远程CMD</kbd>      | 基于套接字的远程关机程序，由Web端和监听器组成         | [Remote-Controller-1.0](https://github.com/canoe95/Remote-Controller-1.0) |
+| <kbd>我的博客</kbd>                 | 基于 VuePress 的单页面应用                            | [canoe95.github.io](https://canoe95.github.io)               |
+| <kbd>击剑火柴人</kbd>               | 双人小游戏，C++ 图形编程                              | [Fencing-Matchman](https://github.com/canoe95/Fencing-Matchman) |
+
+<kbd style="float:right">下一页 ——></kbd>
+
+---
+
+| 项目名称                         | 简述                                           | Github 链接                                                  |
+| -------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
+| <kbd>邮件收发系统</kbd>          | 网页邮箱系统，Java JUC 编程多线程控制邮件发送  | [PostOffice](https://github.com/canoe95/PostOffice)          |
+| <kbd>成绩管理系统</kbd>          | 基于 Springboot、MyBatis 的成绩管理系统        | [Performance-Analysis-System](https://github.com/canoe95/Performance-Analysis-System) |
+| <kbd>微型论坛系统</kbd>          | 基于 JSP 的论坛网页                            | [NEUQHelper](https://github.com/canoe95/NEUQHelper)          |
+| <kbd>编译器前端</kbd>            | 词法分析器和语法分析器，由 Flex/Bison 实现     | [Compile-Experiment](https://github.com/canoe95/Compile-Experiment) |
+| <kbd>基于 C 的 Lisp 编译器</kbd> | 《Build Your Own Lisp》                        | [MyLisp](https://github.com/canoe95/MyLisp)                  |
+| <kbd>ChatGPT的桌面应用</kbd>     | ChatGPT的桌面应用，客户端 Electron，后端 Flask | [ChatGPT-Electron](https://github.com/canoe95/ChatGPT-Electron-App) |
+| <kbd>简易的分类器训练</kbd>      | 一些 SKLearn 和 PyTorch 的机器学习实例         | [ML-Experiment](https://github.com/canoe95/ML-Experiment)    |
+
+&nbsp;&nbsp;[More](https://canoe95.github.io/Pages)
+
+---
+
 # 学生工作
 
 院志愿实践部副主任
@@ -176,155 +326,6 @@ Also, HTML elements are valid:
 class: px-20
 ---
 
-# 优秀课程
-
-The Courses I Have Learned
-
-| 课程                    | 成绩    | 掌握程度                                           |
-| ----------------------- | ------- | -------------------------------------------------- |
-| C++ 程序设计            | 90      | 熟悉 STL，会基本的图形编程                         |
-| 高等数学B(一) / (二)    | 94 / 93 | 良好的逻辑思维                                     |
-| Java 程序设计           | 97      | 能熟练开发后端 API，了解 JUC 并发编程              |
-| Web 开发与应用          | 92      | 能独立使用 HTML/CSS/JS、Vue、Electron 开发前端页面 |
-| 计算机网络课程设计      | 95      | 熟悉 Java Socket 及 WebSocket 编程                 |
-| Linux操作系统及内核分析 | 88      | 熟悉 Linux 基本命令，能手动部署各种服务器环境      |
-
-
-
-<kbd style="float:right"><a href="/grade.pdf">点此浏览完整成绩单</a></kbd>
-
----
-preload: false
----
-
-
-
-# 技能清单
-
-The Technology I Have Learned
-
-<div grid="~ cols-2 gap-4">
-
-<div>
-
-后端开发
-
-- 语言：Java、Python、C++
-- 框架：SpringBoot、MyBatis
-
-前端开发
-
-- 语言：HTML/CSS/JS、TypeScript
-- 框架：Vue、Element-UI、Electron
-
-运维
-
-- 服务器：Linux、Nginx、Tomcat
-- 中间件：MySQL、Redis、Docker、RabbitMQ
-- 工具与文档：Git、Markdown
-
-</div>
-
-<div>
-
-<img src="/devops.png" width="500">
-
-<div class="w-60 relative mt-6">  
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: -100, y: 500, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-    />
-  </div>
-  <div
-    class="text-5xl absolute top-9 left-42 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Full Stack Developer
-  </div>
-
-
-</div>
-</div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-<div
-  v-motion
-  :initial="{ x:770, y: 400, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-<a herf="https://sli.dev/guide/animations.html#motion"></a>
-
-
-
-</div>
-
----
-
-# 软件产出
-
-Code products during NEUQ
-
-| 项目名称                            | 简述                                                  | Github 链接                                                  |
-| ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
-| <kbd>基于Docker的在线判题系统</kbd> | Online Judge 平台，获中国大学生计算机设计大赛省二等奖 | [Bears-OJ](https://github.com/canoe95/Bears-OJ)              |
-| <kbd>基于ChatGLM的远程AI助手</kbd>  | 远程大模型助手，获中国大学生计算机设计大赛国家三等奖  | [Shadow](https://github.com/canoe95/Shadow)                  |
-| <kbd>基于Redis的远程CMD</kbd>       | 基于 Redis 的远程主机控制程序，由Web端和监听器组成    | [Remote-Controller-2.0](https://github.com/canoe95/Remote-Controller-2.0) |
-| <kbd>基于Socket的远程CMD</kbd>      | 基于套接字的远程关机程序，由Web端和监听器组成         | [Remote-Controller-1.0](https://github.com/canoe95/Remote-Controller-1.0) |
-| <kbd>我的博客</kbd>                 | 基于 VuePress 的单页面应用                            | [canoe95.github.io](https://canoe95.github.io)               |
-| <kbd>击剑火柴人</kbd>               | 双人小游戏，C++ 图形编程                              | [Fencing-Matchman](https://github.com/canoe95/Fencing-Matchman) |
-
-<kbd style="float:right">下一页 ——></kbd>
-
----
-
-| 项目名称                         | 简述                                           | Github 链接                                                  |
-| -------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| <kbd>邮件收发系统</kbd>          | 网页邮箱系统，Java JUC 编程多线程控制邮件发送  | [PostOffice](https://github.com/canoe95/PostOffice)          |
-| <kbd>成绩管理系统</kbd>          | 基于 Springboot、MyBatis 的成绩管理系统        | [Performance-Analysis-System](https://github.com/canoe95/Performance-Analysis-System) |
-| <kbd>微型论坛系统</kbd>          | 基于 JSP 的论坛网页                            | [NEUQHelper](https://github.com/canoe95/NEUQHelper)          |
-| <kbd>编译器前端</kbd>            | 词法分析器和语法分析器，由 Flex/Bison 实现     | [Compile-Experiment](https://github.com/canoe95/Compile-Experiment) |
-| <kbd>基于 C 的 Lisp 编译器</kbd> | 《Build Your Own Lisp》                        | [MyLisp](https://github.com/canoe95/MyLisp)                  |
-| <kbd>ChatGPT的桌面应用</kbd>     | ChatGPT的桌面应用，客户端 Electron，后端 Flask | [ChatGPT-Electron](https://github.com/canoe95/ChatGPT-Electron-App) |
-| <kbd>简易的分类器训练</kbd>      | 一些 SKLearn 和 PyTorch 的机器学习实例         | [ML-Experiment](https://github.com/canoe95/ML-Experiment)    |
-
-&nbsp;&nbsp;[More](https://canoe95.github.io/Pages)
-
----
-
 # 部分代码实现
 
 《Attention Is All You Need》
@@ -367,14 +368,18 @@ Code products during NEUQ
 
 ---
 
+
+
 <div grid="~ cols-2 gap-9">
 
+
 <div>
+
 
 输入嵌入层：获取句子输入处理为 512 维的向量，即 d_model
 
 ```python
-# 输入器
+'''输入器'''
 class InputEmbeddings(nn.Module):
 
     def __init__(self, d_model: int, vocab_size: int):
@@ -383,7 +388,7 @@ class InputEmbeddings(nn.Module):
         self.vocab_size = vocab_size
         self.embedding = nn.embedding(vocab_size, d_model)
 
-    # 提供字典类型的层
+
     def forward(self, x):
         return self.embedding(x) * math.sqrt(self.d_model)
 ```
@@ -393,6 +398,7 @@ class InputEmbeddings(nn.Module):
 </div>
 
 <div>
+
 
 位置编码：对输入嵌入生成的向量进行位置编码
 $$
@@ -406,16 +412,16 @@ PE(pos,i) =
 $$
 
 ```python
-# 创建矩阵
+'''创建矩阵'''
 pe = torch.zeros(seq_len, d_model)
 
-# 如何构建向量
+'''如何构建向量'''
 position = torch.arange(0, seq_len, dtype=torch.float).unsqueeze(1)
 div_term = torch.exp(torch.arange(0, d_model, 2).float) * (-math.log(10000.0) / d_model)
 
-# sin 函数对偶数处理
+'''sin 函数对偶数处理'''
 pe[:, 0::2] = torch.sin(position * div_term)
-# cos 函数对奇数处理
+'''cos 函数对奇数处理'''
 pe[:, 1::2] = torch.cos(position * div_term)
 pe = pe.unsqueeze(0)
 ```
