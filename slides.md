@@ -73,7 +73,7 @@ A sample PCB of my study life in NEUQ
 - 🤹 **大四**
   - 备考西电网络与信息安全专业
 
-<a herf="https://github.com/canoe95" style="float: right;">Read more about me</a>
+<a herf="https://github.com/canoe4" style="float: right;">Read more about me</a>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -236,12 +236,12 @@ Code products during NEUQ
 
 | 项目名称                            | 简述                                                  | Github 链接                                                  |
 | ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
-| <kbd>基于Docker的在线判题系统</kbd> | Online Judge 平台，获中国大学生计算机设计大赛省二等奖 | [Bears-OJ](https://github.com/canoe95/Bears-OJ)              |
-| <kbd>基于ChatGLM的远程AI助手</kbd>  | 远程大模型助手，获中国大学生计算机设计大赛国家三等奖  | [Shadow](https://github.com/canoe95/Shadow)                  |
-| <kbd>基于Redis的远程CMD</kbd>       | 基于 Redis 的远程主机控制程序，由Web端和监听器组成    | [Remote-Controller-2.0](https://github.com/canoe95/Remote-Controller-2.0) |
-| <kbd>基于Socket的远程CMD</kbd>      | 基于套接字的远程关机程序，由Web端和监听器组成         | [Remote-Controller-1.0](https://github.com/canoe95/Remote-Controller-1.0) |
-| <kbd>我的博客</kbd>                 | 基于 VuePress 的单页面应用                            | [canoe95.github.io](https://canoe95.github.io)               |
-| <kbd>击剑火柴人</kbd>               | 双人小游戏，C++ 图形编程                              | [Fencing-Matchman](https://github.com/canoe95/Fencing-Matchman) |
+| <kbd>基于Docker的在线判题系统</kbd> | Online Judge 平台，获中国大学生计算机设计大赛省二等奖 | [Bears-OJ](https://github.com/canoe4/Bears-OJ)               |
+| <kbd>基于ChatGLM的远程AI助手</kbd>  | 远程大模型助手，获中国大学生计算机设计大赛国家三等奖  | [Shadow](https://github.com/canoe4/Shadow)                   |
+| <kbd>基于Redis的远程CMD</kbd>       | 基于 Redis 的远程主机控制程序，由Web端和监听器组成    | [Remote-Controller-2.0](https://github.com/canoe4/Remote-Controller-2.0) |
+| <kbd>基于Socket的远程CMD</kbd>      | 基于套接字的远程关机程序，由Web端和监听器组成         | [Remote-Controller-1.0](https://github.com/canoe4/Remote-Controller-1.0) |
+| <kbd>我的博客</kbd>                 | 基于 VuePress 的单页面应用                            | [canoe95.github.io](https://canoe4.github.io)                |
+| <kbd>击剑火柴人</kbd>               | 双人小游戏，C++ 图形编程                              | [Fencing-Matchman](https://github.com/canoe4/Fencing-Matchman) |
 
 <kbd style="float:right">下一页 ——></kbd>
 
@@ -249,15 +249,15 @@ Code products during NEUQ
 
 | 项目名称                         | 简述                                           | Github 链接                                                  |
 | -------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| <kbd>邮件收发系统</kbd>          | 网页邮箱系统，Java JUC 编程多线程控制邮件发送  | [PostOffice](https://github.com/canoe95/PostOffice)          |
-| <kbd>成绩管理系统</kbd>          | 基于 Springboot、MyBatis 的成绩管理系统        | [Performance-Analysis-System](https://github.com/canoe95/Performance-Analysis-System) |
-| <kbd>微型论坛系统</kbd>          | 基于 JSP 的论坛网页                            | [NEUQHelper](https://github.com/canoe95/NEUQHelper)          |
-| <kbd>编译器前端</kbd>            | 词法分析器和语法分析器，由 Flex/Bison 实现     | [Compile-Experiment](https://github.com/canoe95/Compile-Experiment) |
-| <kbd>基于 C 的 Lisp 编译器</kbd> | 《Build Your Own Lisp》                        | [MyLisp](https://github.com/canoe95/MyLisp)                  |
-| <kbd>ChatGPT的桌面应用</kbd>     | ChatGPT的桌面应用，客户端 Electron，后端 Flask | [ChatGPT-Electron](https://github.com/canoe95/ChatGPT-Electron-App) |
-| <kbd>简易的分类器训练</kbd>      | 一些 SKLearn 和 PyTorch 的机器学习实例         | [ML-Experiment](https://github.com/canoe95/ML-Experiment)    |
+| <kbd>邮件收发系统</kbd>          | 网页邮箱系统，Java JUC 编程多线程控制邮件发送  | [PostOffice](https://github.com/canoe4/PostOffice)           |
+| <kbd>成绩管理系统</kbd>          | 基于 Springboot、MyBatis 的成绩管理系统        | [Performance-Analysis-System](https://github.com/canoe4/Performance-Analysis-System) |
+| <kbd>微型论坛系统</kbd>          | 基于 JSP 的论坛网页                            | [NEUQHelper](https://github.com/canoe4/NEUQHelper)           |
+| <kbd>编译器前端</kbd>            | 词法分析器和语法分析器，由 Flex/Bison 实现     | [Compile-Experiment](https://github.com/canoe4/Compile-Experiment) |
+| <kbd>基于 C 的 Lisp 编译器</kbd> | 《Build Your Own Lisp》                        | [MyLisp](https://github.com/canoe4/MyLisp)                   |
+| <kbd>ChatGPT的桌面应用</kbd>     | ChatGPT的桌面应用，客户端 Electron，后端 Flask | [ChatGPT-Electron](https://github.com/canoe4/ChatGPT-Electron-App) |
+| <kbd>简易的分类器训练</kbd>      | 一些 SKLearn 和 PyTorch 的机器学习实例         | [ML-Experiment](https://github.com/canoe4/ML-Experiment)     |
 
-&nbsp;&nbsp;[More](https://canoe95.github.io/Pages)
+&nbsp;&nbsp;[More](https://canoe4.github.io/Pages)
 
 ---
 
