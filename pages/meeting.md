@@ -75,19 +75,11 @@ transition: fade-out
 
 # RFID 概述
 
-Radio Frequency Identification
+射频认证
 
-RFID，射频认证，通过天线电磁波进行数据交换，实现标签与计算机系统的认证（有点像 Web 中的表单验证，只不过传输介质有别），如下为一个一般的 RFID 系统示意图
+一个常规的 RFID 系统
 
-<br>
-
-<img src="/rfid-system.png" style="height:60%;clear:both;margin:auto">
-
-
-
----
-
-## 轻量加密
+<img src="/rfid-system.png">
 
 
 
@@ -97,15 +89,12 @@ RFID，射频认证，通过天线电磁波进行数据交换，实现标签与�
 
 ## HB 协议族
 
-基于 LPN 问题
+LPN 问题
 
 $$
 y_i=a_i\cdot s+e_i
 $$
 
-LPN 问题被证明是抗量子的，即不存在爆搜穷举之类的问题，其主要的被攻击方式是中间人攻击
-
-因为单边认证在大多数 HB 协议族中执行。标签阅读器通信总是被认为是安全的，只有 RFID 标签模拟的可能性。然而，物联网需要相互认证。使用两个独立的认证协议会导致中继攻击、重放攻击、非同步攻击、会话劫持等的风险更高
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -113,7 +102,7 @@ Learn more: https://sli.dev/guide/syntax#embedded-styles
 -->
 
 <style>
-h2 {
+h1 {
   background-color: #2B90B6;
   background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
   background-size: 100%;
@@ -129,19 +118,77 @@ Here is another comment.
 
 ---
 
+## GRS 中间人攻击
+
+physically unclonable functions，物理不可克隆功能
+
+| 课程                    | 成绩    | 掌握程度                                           |
+| ----------------------- | ------- | -------------------------------------------------- |
+| C++ 程序设计            | 90      | 熟悉 STL，会基本的图形编程                         |
+| 高等数学B(一) / (二)    | 94 / 93 | 良好的逻辑思维                                     |
+| Java 程序设计           | 97      | 能熟练开发后端 API，了解 JUC 并发编程              |
+| Web 开发与应用          | 92      | 能独立使用 HTML/CSS/JS、Vue、Electron 开发前端页面 |
+| 计算机网络课程设计      | 95      | 熟悉 Java Socket 及 WebSocket 编程                 |
+| Linux操作系统及内核分析 | 88      | 熟悉 Linux 基本命令，能手动部署各种服务器环境      |
 
 
-# 论文分享
 
-An Ultra‑Lightweight Mutual Authentication Protocol Based on LPN Problem with Distance Fraud Resistant
-
-
-
-<kbd style="float:right">下一页 ——></kbd>
+<kbd style="float:right"><a href="/grade.pdf">点此浏览完整成绩单</a></kbd>
 
 ---
 
-<div grid="~ cols-2 gap-9">
+# 论文分享
+
+HB-PUF 在 RFID 系统的一般应用
+
+<kbd style="float:right">下一页 ——></kbd>
+
+
+
+&nbsp;&nbsp;[More](https://canoe4.github.io/Pages)
+
+---
+
+# 部分代码实现
+
+《Attention Is All You Need》
+
+<div grid="~ cols-2 gap-4">
+
+<div>
+
+
+
+<img src="/transformer.png" style="height:400px">
+
+
+
+</div>
+
+<div>
+
+代码复现：Transformer 模型编码器
+
+- 输入嵌入层
+- 位置编码
+- 多头自注意力层
+- 层归一化
+- 前馈神经网络
+
+参考：
+
+【1】[Coding a Transformer from scratch on PyTorch, with full explanation, training and inference-YouTube](https://www.youtube.com/watch?v=ISNdQcPhsts)
+
+【2】[A PyTorch implementation of the Transformer model in "Attention is All You Need"](https://github.com/jadore801120/attention-is-all-you-need-pytorch)
+
+</div>
+
+</div>
+
+---
+
+<div grid="~ cols-2 gap-7">
+
 <div>
 
 多头自注意力层：最重要的模块，得到编码器的输入**并使用它三次**，分别为查询、键和值，对应之前提到的注意力公式中的三个重要参数（相当于相同的输入，应用了三次）
@@ -173,7 +220,6 @@ class MultiHeadAttentionBlock(nn.Module):
 
 
 
-
 ```python
         self.w_o = nn.Linear(d_model, d_model) # Wo 注意力输出
         self.dropout = nn.Dropout(dropout)
@@ -197,15 +243,13 @@ class MultiHeadAttentionBlock(nn.Module):
         query = query.view(query.shape[0], query.shape[1], self.h, self.d_k).transpose(1, 2)
         key = key.view(key.shape[0], key.shape[1], self.h, self.d_k).transpose(1, 2)
         value = value.view(value.shape[0], value.shape[1], self.h, self.d_k).transpose(1, 2)
+        x, self.attention_scores = MultiHeadAttentionBlock.attention(query, key, value, mask, self.dropout)
+        # (batch, h, Seq_Len, d_k) --> (batch, Seq_Len, h, d_k) --> (batch, Seq_Len, d_model)
+        x = x.transpose(1, 2).contiguous().view(x.shape[0], -1, self.h * self.d_k)
+        return self.w_o(x)
 ```
 
 
-
-
-
-
-
-<kbd style="float:right"><a href="/An Ultra-Lightweight Mutual Authentication Protocol Based on LPN Problem with Distance Fraud Resistant.pdf">点此下载完整论文</a></kbd>
 
 </div>
 
