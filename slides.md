@@ -32,10 +32,11 @@ css: unocss
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    控制访问小组会汇报
+    控制访问小组会汇报（2024.10.3）
     <!--<carbon:arrow-right class="inline"/>-->
   </span>
 </div>
+
 
 
 
@@ -77,25 +78,26 @@ transition: fade-out
 
 Radio Frequency Identification
 
-RFID，射频认证，通过天线电磁波进行数据交换，实现标签与计算机系统的认证（有点像 Web 中的表单验证，只不过传输介质有别），如下为一个一般的 RFID 系统示意图
+RFID，射频认证，通过天线电磁波进行数据交换，实现标签与计算机系统的认证，如下为一个一般的 RFID 系统示意图
+
+<img src="/rfid-system.png" style="height:40%;clear:both;margin:auto">
 
 <br>
 
-<img src="/rfid-system.png" style="height:60%;clear:both;margin:auto">
+有点像 Web 中的表单验证，区别在于
 
-
-
----
-
-## 轻量加密
-
-
+- 数据传输介质不同，在 RFID 系统中数据通过电磁波交换
+- 表单并非用户主动提交，而是服务器对客户端进行**挑战-响应**
 
 ---
 
+##  LPN 问题
 
+<br>
 
-## HB 协议族
+> 轻量加密是 RFID 系统安全的主要研究方向
+
+RFID 系统具有严格的资源约束（主要是为了降低电子标签的成本，需要满足批量应用），利用传统的非对称加密、对称加密以及哈希算法是不合理的。并且，随着量子计算机发展，传统的公钥算法可以通过 Shor 算法在量子计算机上求解，故一个现代的 RFID 加密系统一般要满足两个条件：轻量级和抗量子计算
 
 基于 LPN 问题
 
@@ -103,9 +105,40 @@ $$
 y_i=a_i\cdot s+e_i
 $$
 
-LPN 问题被证明是抗量子的，即不存在爆搜穷举之类的问题，其主要的被攻击方式是中间人攻击
+LPN 问题被证明是抗量子的，其主要的攻击方式是中间人攻击
 
 因为单边认证在大多数 HB 协议族中执行。标签阅读器通信总是被认为是安全的，只有 RFID 标签模拟的可能性。然而，物联网需要相互认证。使用两个独立的认证协议会导致中继攻击、重放攻击、非同步攻击、会话劫持等的风险更高
+
+---
+
+## HB 协议族
+
+**HB 协议** 是由 Hopper 和 Blum 在 2001 年提出的，主要用于 RFID 设备的身份认证。它依赖于 LPN 问题的难解性。HB 协议的基本流程如下：
+
+1. **初始化**：认证方和设备共享一个秘密向量 c
+2. 认证过程
+   - 认证方向设备发送一个随机生成的挑战向量 c
+   - 设备计算 y = c⋅s + e，其中 e 是一个噪声值
+   - 设备将响应 y 发送给认证方
+   - 认证方根据自己的 s 和已知的噪声模型来验证设备发送的响应是否正确
+
+**缺点**：
+
+- HB 协议虽然简单且有效，但它容易受到**主动攻击**，即攻击者可以通过伪造的挑战来获取设备的密钥信息
+- HB 协议族易受中间人攻击
+
+<kbd style="float:right">下一页 ——></kbd>
+
+---
+
+| 协议              | 主要特性                       | 安全性               | 抗攻击类型                                       | 应用场景              |
+| ----------------- | ------------------------------ | -------------------- | ------------------------------------------------ | --------------------- |
+| **HB（01）**      | 基于 LPN，轻量级               | 易受主动攻击         | 抵御被动攻击                                     | RFID、嵌入式          |
+| **HB+（05）**     | 双密钥结构，抗主动攻击         | 抵御主动攻击         | 抵御主动攻击和重放攻击                           | 物联网、身份认证      |
+| **HB++（06）**    | 多轮交互，抗并行攻击           | 高安全性             | 抵御并行和物理攻击                               | RFID、车联网          |
+| **HB#（08）**     | 加强随机化                     | 更强的安全性         | 抵御主动攻击和重放攻击，但无法完全抵御中间人攻击 | 高安全需求的 IoT      |
+| **IHB（15）**     | 改进的随机化机制、双重认证机制 | 更高的安全性         | 抵御中间人攻击、主动攻击、重放攻击               | RFID、物联网设备      |
+| **PUF-HB+（11）** | 结合物理不可克隆函数           | 硬件防克隆，动态响应 | 抵御物理攻击和克隆攻击                           | 高安全 RFID、军事设备 |
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -129,83 +162,108 @@ Here is another comment.
 
 ---
 
+## DB 协议
 
+Distance Bounding Potocols，距离边界协议
 
-# 论文分享
+对于 HB 协议族遭受的中间人攻击，距离边界界定技术被认为是解决此类问题的一个好办法，其核心思想是：基于信号的传播速度等于光速这一事实来测量一个消息在阅读器和标签之间来回传输的往返时间（RTT），并以此来计算出阅读器和标签间的真实距离
+
+- 即，通过计算读写器和标签的物理距离来识别诚实用户
+
+由于这一计算由 RFID 的应用系统实现，故并不会受到读写器和标签的资源限制
+
+---
+
+# 论文主要工作
 
 An Ultra‑Lightweight Mutual Authentication Protocol Based on LPN Problem with Distance Fraud Resistant
 
+主要工作：
 
+- 提出了一种基于 HB 家族协议和 LPN 问题的轻量双向认证协议
+- 采用 DB 协议抵抗与距离相关的攻击
+- 双向认证和距离边界协议共同作用下，能够在不使用经典加密协议的情况下抵抗 GRS 攻击
+
+他的某一步计算类似于 HB+（涉及矩阵运算），一定要回头看看
+
+<kbd style="float:left"><a href="/An Ultra-Lightweight Mutual Authentication Protocol Based on LPN Problem with Distance Fraud Resistant.pdf">点此下载完整论文</a></kbd>
 
 <kbd style="float:right">下一页 ——></kbd>
 
 ---
 
-<div grid="~ cols-2 gap-9">
+<div grid="~ cols-2 gap-4">
+
 <div>
 
-多头自注意力层：最重要的模块，得到编码器的输入**并使用它三次**，分别为查询、键和值，对应之前提到的注意力公式中的三个重要参数（相当于相同的输入，应用了三次）
+双向认证步骤
 
-注意力公式
-$$
-Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V
-$$
-代码实现
-
-```python
-class MultiHeadAttentionBlock(nn.Module):
-    def __init__(self, d_model: int, h: int, dropout: float) -> None:
-        super().init()
-        self.d_model = d_model
-        self.h = h
-        assert d_model % h == 0, "d_model is not divisible by h"
-        self.d_k = d_model // h
-        self.w_q = nn.Linear(d_model, d_model) # Wq 查询
-        self.w_k = nn.Linear(d_model, d_model) # Wk 键
-        self.w_v = nn.Linear(d_model, d_model) # Wv 值
-```
-
-
+<img src="/image-20240921003255964.png">
 
 </div>
 
 <div>
 
+注意力公式
 
 
+$$
+Attention(Q,K,V) = softmax(\frac{QK^T}{\sqrt{d_k}})V
+$$
 
 ```python
-        self.w_o = nn.Linear(d_model, d_model) # Wo 注意力输出
-        self.dropout = nn.Dropout(dropout)
-        
-    # 计算我们想要的注意力分数
-    @staticmethod
-    def attention(query, key, value, mask, dropout: nn.Dropout):
-        d_k = query.shape[-1]
-        attention_scores = (query @ key.transpose(-2, -1)) / math.sqrt(d_k)
-        if mask is not None:
-            attention_scores.masked_fill_(mask == 0, -1e9)
-        attention_scores = attention_scores.softmax(dim = -1)
-        if dropout is not None:
-            attention_scores = dropout(attention_scores)
-        return (attention_scores @ value), attention_scores
+class Solution {
+public:
+    vector<int> getRow(int rowIndex) {
+        vector<int> res;
+        res.push_back(1);
+        for(int i = 0; i < rowIndex; i++){
+            res.push_back((long)res[i]*(rowIndex-i)/(i+1));  
+        }
+        return res;
+    }
+};
 
-    def forward(self, q, k, v, mask): # 矩阵处理，令三个查询的矩阵和 d_k 相关
-        query = self.w_q(q)
-        key = self.w_k(k)
-        value = self.w_v(v)
-        query = query.view(query.shape[0], query.shape[1], self.h, self.d_k).transpose(1, 2)
-        key = key.view(key.shape[0], key.shape[1], self.h, self.d_k).transpose(1, 2)
-        value = value.view(value.shape[0], value.shape[1], self.h, self.d_k).transpose(1, 2)
 ```
 
 
 
 
 
+</div>
 
+</div>
 
-<kbd style="float:right"><a href="/An Ultra-Lightweight Mutual Authentication Protocol Based on LPN Problem with Distance Fraud Resistant.pdf">点此下载完整论文</a></kbd>
+---
+
+<div grid="~ cols-2 gap-4">
+
+<div>
+
+距离边界步骤
+
+<img src="/image-20240921003840795.png">
+
+</div>
+
+<div>
+
+难绷啊
+
+```python
+class Solution {
+public:
+    vector<int> getRow(int rowIndex) {
+        vector<int> res;
+        res.push_back(1);
+        for(int i = 0; i < rowIndex; i++){
+            res.push_back((long)res[i]*(rowIndex-i)/(i+1));  
+        }
+        return res;
+    }
+};
+
+```
 
 </div>
 
@@ -219,4 +277,4 @@ class: text-center
 
 # 感谢观看
 
-敬请师兄师姐批评指正
+敬请批评指正

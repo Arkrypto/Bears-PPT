@@ -429,7 +429,7 @@ database "MySql" {
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
-src: ./pages/multiple-entries.md
+src: ./page/other.md # 在本文档中引入其他 md 文件
 hide: false
 ---
 

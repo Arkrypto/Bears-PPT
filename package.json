@@ -1,5 +1,5 @@
 {
-  "name": "northboat-slidev",
+  "name": "Bears PPT",
   "private": true,
   "scripts": {
     "build": "slidev build",
