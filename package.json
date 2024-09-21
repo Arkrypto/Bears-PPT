@@ -1,5 +1,5 @@
 {
-  "name": "bears ppt",
+  "name": "bears-ppt",
   "private": true,
   "scripts": {
     "build": "slidev build",
