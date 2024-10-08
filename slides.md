@@ -32,7 +32,7 @@ css: unocss
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    控制访问小组会汇报（2024.10.3）
+    控制访问小组会汇报（2024.10.10）
     <!--<carbon:arrow-right class="inline"/>-->
   </span>
 </div>
@@ -41,13 +41,14 @@ css: unocss
 
 
 
+
 <div class="abs-br m-6 flex gap-2">
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
+    <carbon:edit/>
   </button>
-  <a href="https://github.com/canoe95" target="_blank" alt="GitHub"
+  <a href="https://github.com/northboat" target="_blank" alt="GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
+    <carbon-logo-github/>
   </a>
 </div>
 <!--
