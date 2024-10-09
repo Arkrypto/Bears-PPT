@@ -1,28 +1,16 @@
 ---
-# try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-# background: https://source.unsplash.com/collection/94734566/1920x1080
 background: /xdu.jpg
-# apply any windi css classes to the current slide
 class: 'text-center'
-# https://sli.dev/custom/highlighters.html
 highlighter: shiki
-# show line numbers in code blocks
 lineNumbers: false
-# some information about the slides, markdown enabled
 info: |
-  ## Slidev Starter Template
   Presentation slides for developers.
 
   Learn more at [Sli.dev](https://sli.dev)
-# persist drawings in exports and build
 drawings:
   persist: false
-# page transition
 transition: slide-left
-# use UnoCSS
 css: unocss
 ---
 
@@ -260,26 +248,25 @@ An Ultra‑Lightweight Mutual Authentication Protocol Based on LPN Problem with 
 $$
 z1 = (a\oplus c)\cdot X\oplus v1\tag{1}
 $$
-并对 z1 进行二次处理，求得 k 长的向量 b
+并对 z1 进行二次处理，求得 m × k 的矩阵 B
 $$
-b\,|\,b\cdot X=z1\tag{2}
+B\,|\,B* X=z1\tag{2}
 $$
-而后将向量 b 作为认证的密文发送回读写器，同时将随机向量 c 发给读写器
+其中 * 运算定义为
+$$
+z1[i]=row[i](B)\cdot col[i](X)
+$$
+而后将矩阵 B 作为认证的密文发送回读写器，同时将随机向量 c 发给读写器
 
 4、一次认证
 
-读写器收到密文矩阵 B 和随机向量 c，自身已知向量 a 和共享密钥 X，于是由 (1)(2) 可反向计算噪声 v1
-$$
-\begin{aligned}
-v1&=(a\oplus c)\cdot X_{current}\oplus z1\\
-&=(a\oplus c)\cdot X_{current}\oplus b\cdot X
-\end{aligned}
-\tag{3}
-$$
+读写器收到密文矩阵 B 和随机向量 c
+
 </div>
 
 <div>
-<img src="/image-20240924233133744.png" style="margin-top:4px;height:95%">
+<img src="/image-20240924233133744.png" style="margin-top:4px;height:96%">
+
 
 </div>
 
@@ -292,19 +279,23 @@ $$
 4、一次认证（续）
 
 
+自身已知向量 a 和共享密钥 X，于是由 (1)(2) 可反向计算噪声 v1
+$$
+\begin{aligned}
+v1&=(a\oplus c)\cdot X_{current}\oplus z1\\
+&=(a\oplus c)\cdot X_{current}\oplus B*X
+\end{aligned}
+\tag{3}
+$$
 如果 (3) 式计算的噪声不符合预期（概率分布），则考虑是否在上一次认证的 step6 中发生了消息丢失（即读写器更新了密钥而标签尚未更新的情况），采用$X_{recover}$进行认证，公式与 (3) 一致
 $$
 \begin{aligned}
 v1&=(a\oplus c)\cdot X_{recover}\oplus z1\\
-&=(a\oplus c)\cdot X_{recover}\oplus b\cdot X
+&=(a\oplus c)\cdot X_{recover}\oplus B*X
 \end{aligned}
 \tag{4}
 $$
 如果两种密钥均未验证通过，则本轮读写器对标签的认证失败，认为该标签非法。而后发送一个随机矩阵 D 给标签（作为胡乱的答复）（it avoids MIM attack）
-
-5、密文计算、密钥更新
-
-若认证通过，则计算发给标签的响应，由读写器端生成一组 m 位的随机噪声 v2，将标签发给读写器的随机向量 c （充当标签对服务器的“挑战”）作为参数进行加密，获得密文 z2
 
 </div>
 
@@ -319,17 +310,18 @@ $$
 
 <div grid="~ cols-2 gap-4">
 <div>
+5、密文计算、密钥更新
 
-5、密文计算、密钥更新（续）
+若认证通过，则计算发给标签的响应，由读写器端生成一组 m 位的随机噪声 v2，将标签发给读写器的随机向量 c （充当标签对服务器的“挑战”）作为参数进行加密，获得密文 z2
 
 
 加密公式如下，得到一个 m 位的向量 z2
 $$
-z2 = b\cdot X_{current}\oplus c\cdot X_{current}\oplus v2\tag{5}
+z2 = B*X_{current}\oplus c\cdot X_{current}\oplus v2\tag{5}
 $$
-同样的，我们采取相同的处理方式对密文 z2 二次处理，得到加密向量 d
+同样的，我们采取相同的处理方式对密文 z2 二次处理，得到加密矩阵 D 并作为 c 的响应发回标签
 $$
-d\,|\,d\cdot X_{current}=z2\tag{6}
+D\,|\,D*X_{current}=z2\tag{6}
 $$
 计算完毕后，对服务器端的密钥进行更新，更新规则如下
 $$
@@ -340,12 +332,11 @@ $$
 \tag{7}
 $$
 
-最后，将刚才计算得到的向量 d 作为挑战 c 的响应发送回标签，进行最后一步认证
-
 </div>
 
 <div>
-<img src="/image-20240924233133744.png" style="margin-top:14px;height:96%">
+<img src="/image-20240924233133744.png" style="margin-top:4px;height:96%">
+
 
 
 </div>
@@ -359,11 +350,11 @@ $$
 <div>
 6、二次认证、密钥更新
 
-标签接收由读写器发回的响应向量 d，进行如下计算
+标签接收由读写器发回的响应矩阵 D，进行如下计算
 $$
 \begin{aligned}
-v2 &= (d\cdot X)\oplus c\cdot X\oplus z2\\
-&=(d\cdot X)\oplus c\cdot X\oplus b\cdot X
+v2 &= D*X\oplus c\cdot X\oplus z2\\
+&=D*X\oplus c\cdot X\oplus B*X
 \end{aligned}
 \tag{8}
 $$
@@ -440,9 +431,9 @@ $$
 并且将该向量等分为三份 t、q、r，其中
 $$
 \begin{aligned}
-&t=z_2[1],z_2[2],\ldots,z_2[\frac{k}{3}]\\
-&q=z_2[\frac{k}{3}+1],z_2[\frac{k}{3}+2],\ldots,z_2[\frac{2k}{3}]\\
-&r=z_2[\frac{2k}{3}+1],z_2[\frac{2k}{3}+2],\ldots,z_2[k]
+&t=z_2[1],z_2[2],\ldots,z_2[\frac{m}{3}]\\
+&q=z_2[\frac{m}{3}+1],z_2[\frac{m}{3}+2],\ldots,z_2[\frac{2m}{3}]\\
+&r=z_2[\frac{2m}{3}+1],z_2[\frac{2m}{3}+2],\ldots,z_2[m]
 \end{aligned}
 $$
 这步计算在读写器和标签中同步进行。另外，读写器将维护一个允许的最大 RTT，作为超时的判定，记作$\triangle t_{max}$
