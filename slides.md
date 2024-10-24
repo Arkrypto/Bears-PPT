@@ -19,10 +19,11 @@ css: unocss
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    RFID认证/双向认证综述（2024.12.10）
+    RFID/双向认证综述（2024.12.5）
     <!--<carbon:arrow-right class="inline"/>-->
   </span>
 </div>
+
 
 
 
@@ -52,6 +53,44 @@ The last comment block of each slide will be treated as slide notes. It will be 
 > `O`键浏览缩略图，`F`全屏，`D`切换夜间模式
 
 <Toc style="margin-top:9px"></Toc>
+
+---
+
+# 超轻量协议
+
+---
+layout: iframe-left
+url: https://ccf.atom.im/
+---
+
+哈哈哈
+
+---
+
+# 轻量协议
+
+---
+layout: image-right
+image: /xdu.jpg
+---
+
+
+
+---
+
+# 中量级协议
+
+
+
+---
+
+# 重量级协议
+
+
+---
+
+# 双向认证
+
 
 ---
 
