@@ -2,7 +2,7 @@
 theme: seriph
 background: ./assets/neuq.webp
 class: 'text-center'
-highlighter: shiki
+# highlighter: shiki
 lineNumbers: false
 info: |
   Presentation slides for developers.
