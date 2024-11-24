@@ -192,7 +192,7 @@ Lina Skora, Anna Marzecova, Gerhard Jocham; Brain Stimulation, 2024
 **目的:**
 
 - 探究不同模式的 taVNS 是否能够映射到去甲肾上腺素能系统的相位和张力模式
-- 比较相位样（1秒）和张力样（30秒开/关）taVNS 对瞳孔直径的影响
+- 比较强直性（1秒）和阶段性（30秒开/关）taVNS 对瞳孔直径的影响
 
 **设计**：单盲、假对照、交叉设计，在无任务状态下进行
 
@@ -214,33 +214,33 @@ h1 {
 
 **刺激参数:**
 
-- 相位样 taVNS：1秒刺激
-- 张力样 taVNS：30秒开/30秒关
+- 强直性 taVNS：1秒刺激
+- 阶段性 taVNS：30秒开/30秒关
 
 **测量指标**：使用瞳孔直径作为去甲肾上腺素能活动的生物标志物
 
-**相位样 taVNS**
+**强直性 taVNS**
 
-- 相位样 taVNS 引起了瞳孔直径迅速增加，比假刺激条件下显著更大
+- 强直性 taVNS 引起了瞳孔直径迅速增加，比假刺激条件下显著更大
 - 刺激结束后，瞳孔直径迅速恢复到基线水平
 
-**张力样 taVNS**
+**阶段性 taVNS**
 
-- 张力样 taVNS 同样导致瞳孔直径迅速增加，比假刺激条件下显著更大
+- 阶段性 taVNS 同样导致瞳孔直径迅速增加，比假刺激条件下显著更大
 - 尽管刺激持续，瞳孔直径在5秒内回到基线水平
-- 张力样 taVNS 和假刺激的效果相似于相位样效果
+- 阶段性 taVNS 和假刺激的效果相似于相位样效果
 - 没有观察到对张力基线瞳孔直径的持续影响
 
 ---
 
 **讨论**
 
-- 标准刺激参数下的相位样和张力样 taVNS 可能更适合调制去甲肾上腺素能系统的相位活动，而非张力活动
+- 标准刺激参数下的强直性和阶段性 taVNS 可能更适合调制去甲肾上腺素能系统的相位活动，而非张力活动
 - 本研究的结果有助于解释该领域的不一致发现，并为未来的研究提供了指导
 
 **结论**
 
-- 本研究表明，无论是相位样还是张力样的 taVNS 都能引起瞳孔直径的快速变化，这些变化是短暂的
+- 本研究表明，无论是强直性还是阶段性的 taVNS 都能引起瞳孔直径的快速变化，这些变化是短暂的
 - 这一结果对于理解 taVNS 的时间和模式特征具有重要意义，可能影响其在临床和研究中的应用
 
 **临床应用:**
@@ -263,7 +263,7 @@ Danesh Soltani, Bayan Azizi, Sepehr Sima, Kiarash Tavakoli, Negin Sadat Hosseini
 **背景:**
 
 - 迷走神经刺激（VNS）是一种用于治疗多种疾病的神经调节技术
-- 经皮耳部迷走神经刺激（taVNS）是非侵入性的替代方法
+- 经皮耳部迷走神经刺激（taVNS）是非侵入性的具体方法
 
 **目的:**
 
@@ -319,12 +319,12 @@ h1 {
 
 ---
 
-<div style="width:90%;clear:both;margin:auto;margin-top:5%">
+<div style="width:85%;clear:both;margin:auto;margin-top:5%">
 
 
 <div style="text-align:center">
 
-# 总结与展望
+# 总结
 
 <p><center>"The effect of noninvasive vagus nerve stimulation on the baroreflex sensitivity and the pupil"</center></p>
 
