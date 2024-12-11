@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: ./assets/xdu.jpg
+background: /xdu.jpg
 class: 'text-center'
 # highlighter: shiki
 lineNumbers: false
@@ -63,7 +63,7 @@ Radio Frequency Identification
 
 RFID，射频认证，通过天线电磁波进行数据交换，实现标签与计算机系统的认证，如下为一个一般的 RFID 系统
 
-<img src="./assets/rfid-system.png" style="height:30%;clear:both;margin:auto">
+<img src="/rfid-system.png" style="height:30%;clear:both;margin:auto">
 
 <br>
 
@@ -113,7 +113,7 @@ $$
 
 基于 LPN 问题的轻量加密协议，广泛用于 RFID、物联网设备的身份认证。以 HB+ 协议为例，其单轮认证的基本流程如下：
 
-<img src="./assets/image-20240924204104518.png" style="height:67%">
+<img src="/image-20240924204104518.png" style="height:67%">
 
 </div>
 
@@ -136,7 +136,7 @@ $$
 
 ---
 
-<img src="./assets/image-20240925132350762.png" style="height:100%;clear:both;margin:auto">
+<img src="/image-20240925132350762.png" style="height:100%;clear:both;margin:auto">
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -229,7 +229,7 @@ An Ultra‑Lightweight Mutual Authentication Protocol Based on LPN Problem with 
 </div>
 
 <div>
-<img src="./assets/image-20240924233133744.png" style="margin-top:9px;height:95%">
+<img src="/image-20240924233133744.png" style="margin-top:9px;height:95%">
 
 </div>
 
@@ -264,7 +264,7 @@ $$
 </div>
 
 <div>
-<img src="./assets/image-20240924233133744.png" style="margin-top:4px;height:96%">
+<img src="/image-20240924233133744.png" style="margin-top:4px;height:96%">
 
 
 
@@ -300,7 +300,7 @@ $$
 </div>
 
 <div>
-<img src="./assets/image-20240924233133744.png" style="margin-top:4px;height:96%">
+<img src="/image-20240924233133744.png" style="margin-top:4px;height:96%">
 
 
 </div>
@@ -336,7 +336,7 @@ $$
 </div>
 
 <div>
-<img src="./assets/image-20240924233133744.png" style="margin-top:4px;height:96%">
+<img src="/image-20240924233133744.png" style="margin-top:4px;height:96%">
 
 
 
@@ -375,7 +375,7 @@ $$
 </div>
 
 <div>
-<img src="./assets/image-20240924233133744.png" style="margin-top:4px;height:97%">
+<img src="/image-20240924233133744.png" style="margin-top:4px;height:97%">
 
 
 </div>
@@ -409,7 +409,7 @@ $$
 
 协议步骤：
 
-<img src="./assets/image-20240921003840795.png" style="margin-top:14px;height:80%">
+<img src="/image-20240921003840795.png" style="margin-top:14px;height:80%">
 
 
 
@@ -442,7 +442,7 @@ $$
 </div>
 
 <div>
-<img src="./assets/image-20240921003840795.png" style="margin-top:14px;height:94%">
+<img src="/image-20240921003840795.png" style="margin-top:14px;height:94%">
 </div>
 
 
@@ -480,7 +480,7 @@ $$
 </div>
 
 <div>
-<img src="./assets/image-20240921003840795.png" style="margin-top:	4px;height:96%">
+<img src="/image-20240921003840795.png" style="margin-top:	4px;height:96%">
 </div>
 
 
@@ -511,7 +511,7 @@ $$
 </div>
 
 <div>
-<img src="./assets/image-20240921003840795.png" style="margin-top:	14px;height:95%">
+<img src="/image-20240921003840795.png" style="margin-top:	14px;height:95%">
 </div>
 
 

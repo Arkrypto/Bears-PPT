@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: ./assets/neuq.webp
+background: /neuq.webp
 class: 'text-center'
 # highlighter: shiki
 lineNumbers: false
@@ -113,7 +113,7 @@ The Courses I Have Learned
 
 
 
-<kbd style="float:right"><a href="./assets/grade.pdf">点此浏览完整成绩单</a></kbd>
+<kbd style="float:right"><a href="/grade.pdf">点此浏览完整成绩单</a></kbd>
 
 ---
 
@@ -148,7 +148,7 @@ The Technology I Have Learned
 <div>
 
 
-<img src="./assets/devops.png" width="500">
+<img src="/devops.png" width="500">
 
 <div class="w-60 relative mt-6">  
   <div class="relative w-40 h-40">
@@ -256,12 +256,12 @@ Code products during NEUQ
   <p>负责部门日常值班活动的组织、公众号的管理和</p>
   <p>排班等工作，参与<a href="https://canoe7.netlify.app/">部门博客</a>的搭建和维护。e 管</p>
   <p>家志愿服务项目获<a href="http://news.neuq.edu.cn/info/1282/30249.htm">省大学生志愿服务十佳项目</a></p><br>
-  <img src="./assets/repair.webp" width=365>
+  <img src="/repair.webp" width=365>
 </div>
 
 <div style="display:inline-block;float:right">
-	<img src="./assets/teach.webp" width="400"><br>
-    <img src="./assets/work.webp" width="400">
+	<img src="/teach.webp" width="400"><br>
+    <img src="/work.webp" width="400">
 </div>
 
 <arrow v-click="1" x1="950" y1="310" x2="712" y2="435" color="#564" width="3" arrowSize="1" />
@@ -274,7 +274,7 @@ Code products during NEUQ
 <div grid="~ cols-2 gap-4">
 <div>
 <span style="font-size:14px">校乒乓球队队员，男单前八，篮球新生杯随队获院亚军</span>
-<img src="./assets/pp.webp" width=350 style="border-radius:2%; margin-top:9px">
+<img src="/pp.webp" width=350 style="border-radius:2%; margin-top:9px">
 
 
 
@@ -283,7 +283,7 @@ Code products during NEUQ
 <span style="font-size:14px">课余自学吉他</span>
 
 <audio controls>
-  <source src="./assets/baiyang.mp3" type="audio/mpeg">
+  <source src="/baiyang.mp3" type="audio/mpeg">
 </audio>
 
 </div>
@@ -295,7 +295,7 @@ Code products during NEUQ
 每周四会和教练去球馆附近的小学带一节文体活动课
 ```
 
-<img src="./assets/qingyunli.webp" style="border-radius:2%; margin-top:12px">
+<img src="/qingyunli.webp" style="border-radius:2%; margin-top:12px">
 
 </div>
 </div>
@@ -324,7 +324,7 @@ class: px-20
 <div>
 
 
-<img src="./assets/transformer.png" style="height:400px">
+<img src="/transformer.png" style="height:400px">
 
 
 
