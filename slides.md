@@ -233,7 +233,7 @@ h2 {
 
 Fast, Efficient, and Viable Compressed Sensing, Low-Rank, and Robust Principle Component Analysis Algorithms for Radar Signal Processing
 
-<div grid="~ cols-2 gap-0">
+<div grid="~ cols-2 gap-4">
 
 <div>
 
