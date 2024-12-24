@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: /jump.jpg
+background: /xdu.jpg
 class: 'text-center'
 highlighter: shiki
 lineNumbers: false
