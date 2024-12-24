@@ -146,15 +146,22 @@ c 和 z 必须即满足短向量性质
 
 <div grid="~ cols-2 gap-0">
 <div>
-
-<img style="height:80%" src="/cia-report/25-01-02/image-20241216201624341.png">
+<img style="height:80%;margin-top:4px" src="/cia-report/25-01-02/image-20241216201624341.png">
 
 </div>
 
 <div>
-密钥生成
+<strong>密钥生成</strong>
 
+公钥 $(\rho,t_1)$，ρ 为随机种子，$t_1$ 为 $As_1+s_2$ 的高位；私钥 $(\rho,K,tr,s_1,s_2,t_0)$，$t_0$ 为 $As_1+s_2$ 的低位
 
+**签名**
+
+由种子 ρ 生成矩阵 A
+
+**验签**
+
+将 ρ 和 $t_1$ 打包并使用 SHAKE-256 哈希后，整体再和 M 哈希得到 384 位的消息摘要 $\mu$
 
 </div>
 
