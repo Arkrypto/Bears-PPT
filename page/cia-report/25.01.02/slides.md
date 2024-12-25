@@ -17,11 +17,10 @@ css: unocss
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    认证小组组会汇报（2025.01.09）
+    认证小组组会汇报（2025.01.02）
     <!--<carbon:arrow-right class="inline"/>-->
   </span>
 </div>
-
 
 
 
@@ -111,7 +110,7 @@ h1 {
 
 密钥生成
 
-<img style="height:50%" src="/cia-report/25-01-09/image-20241224154906911.png">
+<img style="height:50%" src="/cia-report/25-01-02/image-20241224154906911.png">
 
 其中 E 必须是一个足够“小”的噪声，满足短向量性质，否则将**拒绝采样**
 
@@ -121,7 +120,7 @@ h1 {
 
 签名
 
-<img style="height:65%" src="/cia-report/25-01-09/image-20241224184443176.png">
+<img style="height:65%" src="/cia-report/25-01-02/image-20241224184443176.png">
 
 c 和 z 必须即满足短向量性质
 
@@ -131,7 +130,7 @@ c 和 z 必须即满足短向量性质
 
 验签
 
-<img style="height:50%" src="/cia-report/25-01-09/image-20241224184557214.png">
+<img style="height:50%" src="/cia-report/25-01-02/image-20241224184557214.png">
 
 对签名值 (z, c) 进行验证，通过 z 计算出哈希值 $c'=H(\lfloor w_d\rceil,\mu)$ 并与 c 进行比较实现验签
 
@@ -148,28 +147,25 @@ c 和 z 必须即满足短向量性质
 <div grid="~ cols-2 gap-6">
 <div>
 
-
 **支持函数**
 
-<img style="height:100%;margin-top:6px" src="/cia-report/25-01-09/image-20241225143505916.png">
+<img style="height:100%;margin-top:6px" src="/cia-report/25-01-02/image-20241225143505916.png">
 
 </div>
 
-<div style="padding-top:42px">
+<div style="padding-top:40px">
 
+$Power2Round_q(r,d)$ — 根据指数 d 分 r 为高低位
 
+$Decompose_q(r,d)$ —
 
-$Decompose_q(r,\alpha)$ — 分解 $r=r_1\alpha+r_0\mod q$
+$HighBits_1(r,\alpha)$ — 获取 r 的高位
 
-$Power2Round_q(r,d)$ — 根据 $2^d$ 分解 r 的高低位
+$LowBits_1(r,\alpha)$ — 获取 r 的低位
 
-$HighBits_q(r,\alpha)$ — 获取 r 的高位 $r_1$
+$MakeHint_q(z,r,\alpha)$ — 获取进位符 h
 
-$LowBits_q(r,\alpha)$ — 获取 r 的低位 $r_0$
-
-$MakeHint_q(z,r,\alpha)$ — 根据临界值 z 获取进位符 h
-
-$UseHint_q(h,r,\alpha)$ — 还原高位 $r_1=\lfloor\frac{r_0+h}{(q-1)/\alpha}\rfloor$
+$UseHint_q(h,r,\alpha)$ — 根据进位符 h 还原高位 $r_1$
 
 </div>
 
@@ -177,26 +173,24 @@ $UseHint_q(h,r,\alpha)$ — 还原高位 $r_1=\lfloor\frac{r_0+h}{(q-1)/\alpha}\
 
 ---
 
-<div grid="~ cols-2 gap-6">
+<div grid="~ cols-2 gap-4">
 <div>
-<img style="height:96%;margin-top:1px" src="/cia-report/25-01-09/image-20241225163019891.png">
-
+<img style="height:100%;margin-top:2px" src="/cia-report/25-01-02/image-20241216201624341.png">
 
 </div>
 
 <div>
 <strong>密钥生成</strong>
 
+公钥 $(\rho,t_1)$，ρ 为随机种子，$t_1$ 为 $As_1+s_2$ 的高位；私钥 $(\rho,K,tr,s_1,s_2,t_0)$，$t_0$ 为 $As_1+s_2$ 的低位
 
-$\rho$ 为随机种子，$ExpandA(\rho)$ 将其映射为一个 k×l 的矩阵 A，计算 $t=As_1+s_2$，CRH 为哈希函数，$(t_1,t_0)$ 分别为 t 被 $2^d$ 分解的高低位
+**签名**
 
-**签名**：$(sk,M)\rightarrow\sigma=(z,h,c)$
+由种子 ρ 生成矩阵 A
 
-$y$ 是从离散高斯分布中采样的随机向量，是签名 $z=y+cs_1$ 的随机性来源，密文 $c=H(\mu||w_1)=H(CRH(tr||M)||HighBits_q(Ay,2\gamma_2))$，这里对 y 有拒绝采样策略，y 必须符合一定的范数限制，以确保签名 z 与密钥 $s_1$ 无关
+**验签**
 
-**验签**：$(pk,M,\sigma)\rightarrow 1/0$
-
-验签者通过公钥和明文计算 $\mu=CRH(tr||M)=CRH(CRH(\rho||t_1)||M)$，再由进位符 h 和密文 z 还原 $w_1'=Az-ct_1\cdot2^d=Ay+Acs_1-ct_1\cdot2^d$，最后比对 $H(\mu,w_1')\overset{?}{=}c$ 验证
+将 ρ 和 $t_1$ 打包并使用 SHAKE-256 哈希后，整体再和 M 哈希得到 384 位的消息摘要 $\mu$
 
 </div>
 
@@ -213,12 +207,6 @@ h1 {
   -moz-text-fill-color: transparent;
 }
 </style>
----
-
-# 正确性证明
-
-$w_1'$ 与 $w_1$ 的恒等性
-
 ---
 layout: center
 
