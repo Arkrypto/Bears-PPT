@@ -278,7 +278,7 @@ Mecbeth Act Ⅴ: Banquo's Suspicions And Killings
 
 
 <div>
-<img src="/en-macbeth/20250402193425.png" style="width:65%">
+<img src="/en-macbeth/20250402193428.png" style="width:65%">
 
 
 
@@ -332,7 +332,8 @@ Mecbeth Act Ⅵ: Tragic Finale
 
 
 <div>
-<img src="/en-macbeth/20250402193428.png" style="width:70%">
+<img src="/en-macbeth/20250402193425.png" style="width:70%">
+
 
 
 
