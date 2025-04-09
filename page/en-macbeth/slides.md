@@ -19,10 +19,11 @@ css: unocss
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    西方文学选读第四组 - 麦克白
+    第四组：赵玉宁、李兴华、闫向红、崔婉婷、万紫嫣、熊舟桐
     <!--<carbon:arrow-right class="inline"/>-->
   </span>
 </div>
+
 
 
 
