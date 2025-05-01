@@ -255,9 +255,14 @@ h2 {
 <div>
 The Initial Authentication Phase of our proposed 5G Secure Handover Scheme
 
-通过 TID 和 PID 实现匿名性
-
-
+- A1 - HgNB 生成更新版 $CERT_H$（包含 HID 与 gh），并进行**签名净化**（Sanit）后发给 UE
+- A2 - UE **验证** $CERT_H$、生成临时会话密钥，并发送加密后的 PID、rid 和 TID 给 HgNB
+- A3 - HgNB 解密并转发 UE 身份信息到 AuC
+- A4 - AuC 生成 ZUID、证书 $CERT_U$、**签名** $\sigma_U$、吊销证明 $π_U$，并用 $k_i$ 加密发送回 HgNB
+- A5 - HgNB 用会话密钥 $k_s$ 将 M4 加密发送给 UE
+- A6 - UE **验证** $CERT_U$，发送 ACK（嵌套 AE 加密 flag 和 TID）给 HgNB
+- A7 - HgNB 解密 ACK 并转发至 AuC
+- A8 - AuC 解密 ACK 并更新 TID∗，实现**密钥同步**
 
 </div>
 
@@ -292,13 +297,14 @@ h2 {
 
 The Intra-region Handover Protocol of our proposed 5G Secure Handover Scheme
 
-
-
 </div>
 
 <div>
-可擦除签名
+用户在不同基站（HgNB）之间移动时的快速重认证机制
 
+- B1 - HgNB → UE：与初始认证的 A1 相同，HgNB 对自己的 $CERT_H$ 进行 SanSig **净化**后发送
+- B2 - UE → HgNB：**验证** HgNB 的身份并生成 DH 密钥份额与会话密钥 $k_s$，使用 $k_s$ 加密内容 $CERT_U \,||\,\sigma_U\,||\,π_U\,||\,v$ 得到消息 $M_2$ 发送回 HgNB
+- B3 - HgNB：HgNB 用私钥生成共享密钥 $k_s$，解密 $M_2$ 获取 $(CERT_U, \sigma_U, π_U, v)$，并**验证签名**；检查累加器版本，若一致则调用 $Verify_{acc}$ 验证吊销状态，否则更新非成员证明；将**更新**后的 $(π_U^*, v^*)$ 用 $k_s$ 加密发送，UE 解密并保存用于后续通信
 
 
 </div>
@@ -335,6 +341,13 @@ h2 {
 <div>
 The Inter-region Handover Protocol of our proposed 5G Secure Handover Scheme
 
+
+- C1：HgNB 对自身证书**净化**后，发送 $M_1 = [CERT_H^*, \sigma_H^*, g^h]$ 给 UE
+- C2：UE **验证** $M_1$，与 HgNB 协商密钥 $k_s$，发送加密消息 $M_2 = [\text{AE.Enc}_{k_s}(CERT_U, \sigma_U, \pi_U, v), g^{r_u}]$
+- C3：解密 $M_2$，将 $(CERT_U, \sigma_U, \pi_U, v)$ 作为明文 $M_3$ 发给 gNB
+- C4：gNB **验证签名**与吊销状态，更新 RU-ID 并生成新证书 $CERT_U^*$，返回 $M_4 = [\sigma_U^*, CERT_U^*, \pi_U^*, v^*]$
+- C5：HgNB 使用 $k_s$ 加密 $M_4$，生成 $M_5$ 发送给 UE
+- C6：UE 解密 $M_5$，验证后**更新**本地证书和 RU-ID
 
 </div>
 
