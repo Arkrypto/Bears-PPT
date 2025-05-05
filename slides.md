@@ -15,6 +15,8 @@ css: unocss
 
 ## Privacy-Aware Secure Region-Based Handover for  Small Cell Networks in 5G-Enabled  Mobile Communication
 
+[IEEE Transactions on Information Forensics and Security](https://ieeexplore.ieee.org/document/10068301)
+
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
     认证小组会汇报 — 2025.05.06
