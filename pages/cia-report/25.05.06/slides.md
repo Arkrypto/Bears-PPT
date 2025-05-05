@@ -15,6 +15,8 @@ css: unocss
 
 ## Privacy-Aware Secure Region-Based Handover for  Small Cell Networks in 5G-Enabled  Mobile Communication
 
+[IEEE Transactions on Information Forensics and Security](https://ieeexplore.ieee.org/document/10068301)
+
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
     认证小组会汇报 — 2025.05.06
@@ -39,6 +41,18 @@ transition: fade-out
 # 目录
 
 <Toc></Toc>
+
+<style>
+h1 {
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+</style>
 
 ---
 
@@ -238,22 +252,19 @@ h2 {
 
 ## 初始认证协议
 
-<div grid="~ cols-2 gap-4">
+<div grid="~ cols-2 gap-2">
+
 
 
 <div>
-<img src="/cia-report/25-05.06/image-20250415172355282.png" style="height:70%; margin-top:7px">
-
-
-
-
-
-
+<img src="/cia-report/25-05.06/image-20250505223039024.png" style="width:65%; margin-top:20px; margin-left:10px">
 
 </div>
 
 <div>
-The Initial Authentication Phase of our proposed 5G Secure Handover Scheme
+
+AuC 签名验签，HgNB 净化验签，UE 验签
+
 
 - $A_1$：HgNB 生成更新版 $CERT_H$（包含 HID 与 $g^h$），并进行**签名净化**（Sanit）后发给 UE
 - $A_2$：UE **验证** $CERT_H$、生成临时会话密钥，并发送加密后的 PID、$r_{id}$ 和 TID 给 HgNB
@@ -288,19 +299,16 @@ h2 {
 <div grid="~ cols-2 gap-12">
 
 
-
 <div>
-<img src="/cia-report/25-05.06/image-20250415172455308.png" style="margin-bottom:7px; margin-top:4px;">
+    <center><img src="/cia-report/25-05.06/image-20250505222227373.png" style="margin-top:70px; width:85%"></center>
 
 
-
-
-The Intra-region Handover Protocol of our proposed 5G Secure Handover Scheme
 
 </div>
 
 <div>
-用户在不同基站（HgNB）之间移动时的快速重认证机制
+
+用户通过累加器 v 实现在不同基站（HgNB）之间移动的快速重认证机制
 
 - $B_1$：与初始认证的 A1 相同，HgNB 对自己的 $CERT_H$ 进行 SanSig **净化**后发送
 - $B_2$：**验证** HgNB 的身份并生成 DH 密钥份额与会话密钥 $k_s$，使用 $k_s$ 加密内容 $CERT_U \,||\,\sigma_U\,||\,π_U\,||\,v$ 得到消息 $M_2$ 发送回 HgNB
@@ -327,20 +335,17 @@ h2 {
 
 ## 区域间切换协议
 
-<div grid="~ cols-2 gap-4">
-
+<div grid="~ cols-2 gap-8">
 
 
 <div>
-<img src="/cia-report/25-05.06/image-20250427175532272.png" style="height:85%; margin-top:6px">
-
-
-
+<img src="/cia-report/25-05.06/image-20250505222753986.png" style="width:80%; margin-top:22px">
 
 </div>
 
 <div>
-The Inter-region Handover Protocol of our proposed 5G Secure Handover Scheme
+
+基站 gNB 通过净化的手段更新 AuC 的证书，同时更新累加器，实现区域的切换
 
 
 - $C_1$：HgNB 对自身证书**净化**后，发送 $M_1 = [CERT_H^*, \sigma_H^*, g^h]$ 给 UE
